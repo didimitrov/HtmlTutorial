@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Layout</title>
+    <style>
+html{
+    height:100%;
+}
+body{
+    height:100%;
+    width:100%;
+    background-color:aquamarine;
+    padding:0;
+}
+#wrapper{
+     /*position:absolute;*/
+     margin:0 auto;
+     background-color:teal;
+     width:1000px;
+     height:100%;
+     color:gold;
+ }
+/*header, section,nav, footer{
+    display:block;
+}*/
+header{
+    background-color: purple;
+    margin-bottom:5px;
+}
+h1{
+    text-align:center;
+    letter-spacing:5px;
+    margin:0 auto;
+}
+#leftNav{
+    float:left;
+    background-color: green;
+    margin-left:5px;
+    width:30%;
+
+
+}
+#content{
+    background-color:darkred;
+    margin-left:5px;
+    margin-right:5px;
+    float:left;
+    width: 38%;
+}
+#rightNav{
+    float:right;
+    background-color:navy;
+    width:30%;
+    margin-right:5px;
+}
+footer{
+    position:fixed;
+    bottom:0px;
+    width:1000px;
+    /*clear:both;*/
+    text-align:center;
+
+}
+nav ul {
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    padding:0;
+}
+nav ul li {
+    border:1px solid black;
+    /*float: left;*/
+}
+ 
+    nav ul li a {
+        display: block;
+        /*margin-right: 20px;*/
+        width: 100px;
+        font-size: 14px;
+        line-height: 44px;
+        text-align: center;
+        text-decoration: none;
+        color: gold;
+        margin:0 auto;
+    }
+ 
+        nav ul li a:hover {
+            color: #fff;
+        }
+ 
+        nav ul li.selected a {
+            color: #fff;
+        }
+li:hover{
+    background-color:darkred;
+}
+    </style>
+</head>
+<body>
+    http://code.tutsplus.com/tutorials/html-5-and-css-3-the-techniques-youll-soon-be-using--net-5708
+
+    <div id="wrapper">
+
+       <header><h1>Main title</h1></header>
+
+        <nav id="leftNav">
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Archives</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="content">           
+                input content hereeeeeeeeeeeeeeeeeeejjjjjjjjj jjjjjjjjj jjjjjj aaaaaaaaaaaaaa
+                jjjjjjjssssssssssss jjjjjjjjjjjjj            
+        </div>
+        <nav id="rightNav">This is RIGHT navigation area</nav>
+        <footer><p>This is the footer</p></footer>
+    </div> 
+</body>
+</html>

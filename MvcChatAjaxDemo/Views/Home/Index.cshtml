@@ -1,0 +1,52 @@
+﻿<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Chat home page</h2>
+
+<div id="result">
+
+    @using (Ajax.BeginForm("StartChat", "Home", new AjaxOptions()
+    {
+        HttpMethod = "post",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "result"
+    }))
+    {
+        @Html.Label("Enter your name ")
+        @Html.TextBox("name")
+        <input type="submit" name="" value="Enter" />
+    }
+
+   
+    
+        @*<label for="name">Enter your name</label>
+        <input type="text" name="name" value=" "  id="name"/>
+        <input type="submit" name="btn" value="Enter " id="btn" />*@
+   
+    
+</div> 
+<script>
+    //$(document).ready(function () {
+    //    //var data1 = $('form').serialize()
+    //    var Name=$('#name').val()
+    //    $('#btn').click(function () {
+    //        $.ajax({
+    //            url: 'StartChat',
+    //            type: 'POST',
+    //            data: {name:Name},
+               
+    //            //data: JSON.stringify(data1),
+    //            //contenttype:'application/json',
+    //            success: function (data) {
+    //                $('#result').html(data);
+    //            },
+    //            error: function (err) {
+    //                alert(JSON.stringify(err))
+    //            }
+    //        })
+    //    })
+    //})
+</script>

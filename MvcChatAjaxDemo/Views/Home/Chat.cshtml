@@ -1,0 +1,37 @@
+﻿@*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
+@*<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>*@
+
+@*@using(Ajax.BeginForm("Chat","Home", new AjaxOptions(){
+    HttpMethod= "post",
+    InsertionMode=InsertionMode.InsertAfter,
+    UpdateTargetId="message"
+}) ) 
+{
+    @Html.Label("Enter message")
+    @Html.TextArea("msg", new {id="chatArea", autocomplite="off"})
+    <input type="submit" value="Send " id="btnChat" />
+}*@
+
+<label>Enter message</label>
+<input type="text" name="msg" value=" " id="chatArea" col ="2" />
+<input type="submit" name="" value="Send "  id="btnChat"/>
+<div id="message"></div>
+
+<script>
+    $(document).ready(function () {
+        $('#btnChat').click(function () {
+            var msg = $('#chatArea').val()
+            $.ajax({
+                type: 'POST',
+                url: 'Chat',
+                data: { msg: msg },
+                success: function (data) {
+                    $('#message').append(data);
+                    $('#chatArea').val(' ');
+                }
+            })
+        })
+           
+        
+    })
+</script>

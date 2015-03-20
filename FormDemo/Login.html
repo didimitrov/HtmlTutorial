@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LoginForm</title>
+    <style>
+        input {
+            /*margin-left: 50px;*/
+        }
+
+        label {
+            display: block;
+        }
+
+        form {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Contcts</legend>
+            <label for="Name">Name</label>
+            <input type="text" name="Name" value=" " id="Name" /><br />
+            <label for="pass">Password</label>
+            <input type="password" name="pass" value=" " id="pass" /><br />
+            <label for="rPass">Repeat password</label>
+            <input type="password" name="rPass" value=" " id="rPass" /><br />
+            <label for="mail">Email</label>
+            <input type="email" name="email" value=" " id="mail" /><br />          
+        </fieldset>
+
+        <fieldset>
+            <legend>Gender and City</legend>
+            male<input type="radio" name="sex" value="Male " /><br />
+            female<input type="radio" name="sex" value="Female " />
+            <label for="city">City</label>
+            <select id="city">
+                <optgroup label="East">
+                    <option value="Shumen">Shumen</option>
+                    <option value="Varna">Varna</option>
+                </optgroup>
+                <optgroup label="West">
+                    <option value="Shumen">Sofia</option>
+                </optgroup>
+            </select><br />
+            <label for="file">Select avatar</label>
+            <input type="file" name="file" value=" " id="file" /><br />
+
+           <input type="checkbox" name="chekbox" value=" " /> I Agree 
+        </fieldset><br />
+
+        <input type="submit" name="submit" value="Save " />
+        <input type="reset" name="reset" value="Reset " />
+
+    </form>
+</body>
+</html>

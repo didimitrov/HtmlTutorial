@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--<p>This is the body element</p>-->
+    <section>
+        This is a section element
+        <header>
+            <h1>This is the main header</h1>
+        </header>
+        <aside>
+            <!--This is a ASIDE element-->
+            <p>Aside content here</p>
+        </aside>
+        
+       
+        <article>
+            <!--This is a section article element-->
+            <header>
+                <h2>Article header</h2>
+                <time>March, 25th</time>
+            </header>
+            <p>Lorem input...</p>
+        </article>
+        <footer>
+            <p>This is a section footer element</p>
+        </footer>
+    </section>
+    http://www.html5code.nl/html5-tuts/html5-tutorial-new-tags-attributes/
+
+    <hr />  
+    <div id="wrapper">
+        <div class="item">
+            <a href="#" class="title">item 1</a>
+            <p class="content">Lorem input..</p>
+        </div>
+        <div class="item">
+            <a href="#" class="title">item 2</a>
+            <p class="content">Lorem input..</p>
+        </div>
+        <div class="item">
+            <a href="#" class="title">item 3</a>
+            <p class="content">Lorem input..</p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("p.content").hide();
+            $("a.title").on("click", function () {
+                $(this).next().slideToggle();   
+            })
+        })
+    </script>
+</body>
+</html>
