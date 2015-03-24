@@ -1,5 +1,5 @@
 ﻿/* Makeshift CSS Reset */
-{
+html{
     margin: 0;
     padding: 0;
 }
@@ -30,7 +30,6 @@ h3 {
 
 #leftNav{
     float:left;
-    background-color:;
     margin-left:5px;
     width:30%;
 }
@@ -79,6 +78,9 @@ p {
     float:left;
     width: 38%;
 }
-section{
-    float:
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 1000px;
+    text-align: center;
 }

@@ -36,27 +36,58 @@
     http://www.html5code.nl/html5-tuts/html5-tutorial-new-tags-attributes/
 
     <hr />  
-    <!--<div id="wrapper">
-        <div class="item">
-            <a href="#" class="title">item 1</a>
-            <p class="content">Lorem input..</p>
-        </div>
-        <div class="item">
-            <a href="#" class="title">item 2</a>
-            <p class="content">Lorem input..</p>
-        </div>
-        <div class="item">
-            <a href="#" class="title">item 3</a>
-            <p class="content">Lorem input..</p>
-        </div>
-    </div>
-    <script>
-        $(document).ready(function () {
-            $("p.content").hide();
-            $("a.title").on("click", function () {
-                $(this).next().slideToggle();   
+        Hide Odd Rows
+        <table border='1'>
+            <tr><td>row 1</td></tr>
+            <tr><td>row 2</td></tr>
+            <tr><td>row 3</td></tr>
+            <tr><td>row 4</td></tr>
+            <tr><td>row 5</td></tr>
+        </table>
+        <button id="btnHideOddRows">Hide Odd Rows</button>
+        <script>
+            $('#btnHideOddRows').on('click', function () {
+                $('tr').each(function (i) {
+                    if (i % 2 == 0) {
+                        $(this).hide();
+                    }
+                })
             })
-        })
-    </script>-->
-</body>
+            //var rows = document.getElementsByTagName("tr")
+            //function HideOddRows() {
+            //    for (var i = 0; i < rows.length; i++) {
+            //        if (i % 2 == 0) {
+            //            rows[i].style.display = 'none';
+            //        }
+            //    }
+            //}
+            //var btn = document.getElementById("btnHideOddRows");
+            //btn.addEventListener("click", HideOddRows);
+        </script>
+
+
+
+        <!--<div id="wrapper">
+            <div class="item">
+                <a href="#" class="title">item 1</a>
+                <p class="content">Lorem input..</p>
+            </div>
+            <div class="item">
+                <a href="#" class="title">item 2</a>
+                <p class="content">Lorem input..</p>
+            </div>
+            <div class="item">
+                <a href="#" class="title">item 3</a>
+                <p class="content">Lorem input..</p>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $("p.content").hide();
+                $("a.title").on("click", function () {
+                    $(this).next().slideToggle();
+                })
+            })
+        </script>-->
+    </body>
 </html>
